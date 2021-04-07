@@ -1,0 +1,21 @@
+<p>{{myName}}</p>
+<ul *ngFor="let flower of arrayOfFlowers">
+  <li>{{flower.name}} price {{flower.price}}</li>
+</ul>
+<label>Add an item: <input #newItem></label>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+<ul *ngFor="let x of resultingArray">
+  <li>{{x}}</li>
+</ul>
+<br>
+<h1>I am dop</h1>
+<button (click)="transferToUp(true)">button +</button>
+<button (click)="transferToUp(false)">button -</button>
+<br>
+<input #first type="text" placeholder="enter first number">
+<input #second type="text" placeholder="enter second number">
+<button (click)="sendNumbers([ first.value, second.value])">Send numbers</button>
+<h3>Send object</h3>
+<input #name type="text" placeholder="name">
+<input #color type="text" placeholder="color">
+<button (click)="sendObject({name: name.value, color: color.value})">Send object</button>

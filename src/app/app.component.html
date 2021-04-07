@@ -1,0 +1,16 @@
+<!--<ul>-->
+<!--  <li *ngFor="let item of items">{{item}} //нам нужно этот текст внутри доп</li>-->
+<!--</ul>-->
+<app-dop (addOrMinus)="MinusOrAdd($event)"
+         [myName]="name" [arrayOfFlowers]="bouquet"
+         (newItemEvent)="addItem($event)"
+         
+         [resultingArray]="items"
+         (receiveNumbers)="TwoNumber($event)"
+         (receiveObject)="addObject($event)"
+></app-dop>
+<p>First number ({{firstNumber}}) Second number({{secondNumber}})</p>
+<p>Counter: {{this.counter}}</p>
+
+
+
